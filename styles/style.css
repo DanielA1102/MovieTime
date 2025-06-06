@@ -1,0 +1,445 @@
+/* Basisstijl voor body en pagina */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Navigatiebalk */
+nav {
+    background-color: #282b2f;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo linksboven op groot scherm, midden op klein scherm */
+nav img {
+    height: 50px;
+    order: 0;
+}
+
+/* Navigatiemenu standaard styling */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger icon standaard verborgen */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Media queries voor kleine apparaten */
+@media (max-width: 768px) {
+    /* Logo midden bovenaan op klein scherm */
+    nav {
+        justify-content: center;
+    }
+
+    /* Verberg het navigatiemenu en toon de hamburger */
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    /* Toon het menu als de hamburger wordt aangeklikt */
+    nav ul.mobile.active {
+        display: block;
+        position: absolute;
+        background-color: #27292b;
+        top: 50px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul.mobile.active li {
+        margin: 10px 0;
+    }
+
+    nav ul.mobile.active li a {
+        display: block;
+        padding: 10px 0;
+        color: white;
+    }
+
+    nav img {
+        height: 40px;
+    }
+
+    /* Paginatitel gecentreerd op kleine schermen */
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Paginatitel links uitgelijnd op groot scherm */
+h1 {
+    text-align: left;
+    margin: 20px;
+    color: #333;
+}
+
+/* Stijl voor de contactblokken */
+.contact-blokken {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-blok {
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoekveld styling */
+.zoekveld {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+.welkom h1 , p {
+    text-align: center;
+    
+}
+
+/* Responsiveness voor tablets */
+@media (max-width: 768px) {
+    .contact-blokken {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Adresblokken onder elkaar op mobiele apparaten */
+@media (max-width: 768px) {
+    .contact-blokken {
+        grid-template-columns: 1fr;
+    }
+} 
+ /* Container-styling */
+        .container {
+            display: flex;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Linker en rechter paneel */
+        .films, .recensies {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        /* Filmoverzicht - Linkerzijde */
+        .films {
+            width: 60%;
+        }
+
+        /* Recensie overzicht - Rechterzijde */
+        .recensies {
+            width: 50%;
+        }
+
+        /* Styling voor filmitems */
+        .film-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .film-poster {
+            width: 100px;
+            height: 150px;
+            margin-right: 15px;
+        }
+
+        .film-info {
+            flex-grow: 1;
+        }
+
+        /* Recensieformulier styling */
+        .recensie-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .recensie-form textarea {
+            margin-top: 5px;
+            resize: none;
+            height: 60px;
+        }
+
+        .stars {
+            display: flex;
+            margin-top: 5px;
+        }
+
+        .star {
+            font-size: 20px;
+            cursor: pointer;
+            color: gray;
+        }
+
+        .star.selected {
+            color: gold;
+        }
+
+        /* Gemaakte recensies lijst */
+        .recensie-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Kortingsmelding */
+        .kortingsmelding {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        /* Responsieve weergave */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .films, .recensies {
+                width: 100%;
+            }
+
+            .film-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .film-poster {
+                margin: 0;
+            }
+        }
+
+        /* Navigatiebalk CSS */
+        nav {
+            background-color: #282b2f;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Logo en menu */
+        nav img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        /* Responsiveness en mobiele layout */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 15px;
+            }
+
+            nav ul.mobile.active {
+                display: block;
+                position: absolute;
+                background-color: #27292b;
+                top: 50px;
+                width: 100%;
+                left: 0;
+                text-align: center;
+            }
+
+            nav ul.mobile.active li {
+                margin: 10px 0;
+            }
+
+            nav ul.mobile.active li a {
+                display: block;
+                padding: 10px 0;
+                color: white;
+            }
+
+            nav img {
+                height: 40px;
+            }
+        }
+        .stars {
+            display: flex;
+            margin-top: 5px;
+        }
+        
+        .star {
+            font-size: 30px; /* Grotere sterren voor een betere klikbare interface */
+            cursor: pointer;
+            color: #ccc; /* Grijze sterren bij de start */
+            transition: color 0.3s; /* Zachte overgang tussen kleuren */
+        }
+        
+        .star.selected {
+            color: gold; /* Gouden kleur voor geselecteerde sterren */
+        }
+        
+        /* Styling voor de recensie tekstvelden */
+        .recensie-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        
+        .recensie-form textarea {
+            margin-top: 5px;
+            resize: none;
+            height: 60px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        /* Button voor het toevoegen van recensies */
+        .recensie-form button {
+            background-color: #282b2f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .recensie-form button:hover {
+            background-color: #3c3f44;
+        }
+        
+        
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .film-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .film {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 15px;
+            max-width: 300px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .film img {
+            width: 100%;
+            height: auto;
+        }
+
+        .film h3 {
+            margin: 10px 0;
+        }
+
+        .film p {
+            padding: 0 10px 10px 10px;
+        }
+
+        .film a {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .film a:hover {
+            text-decoration: underline;
+        }
+   .h1-films {
+    text-align: center;
+    color: white;
+   }
+   

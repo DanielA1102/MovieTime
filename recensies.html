@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recensies - Movietime</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Navigatiebalk -->
+    <nav>
+        <img src="images/movielogo.png" alt="Movietime Logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="films.html">Films</a></li>
+            <li><a href="recensies.html">Recensies</a></li>
+            <li><a href="vestigingen.html">Vestigingen</a></li>
+        </ul>
+    </nav>
+<h1>Geef je mening en krijg korting!</h1>
+    <div class="container">
+        
+        <div class="films">
+            <h2>Nu in de Bioscoop</h2>
+            <!-- filmoverzicht met recensie optie -->
+            <div class="film-item">
+                <img src="images/inception.jpg" alt="inception" class="film-poster">
+                <div class="film-info">
+                    <h3>inception</h3>
+                    <div class="recensie-form">
+                        <label for="rating1">Geef uw beoordeling:</label>
+                        <div class="stars" id="rating1" data-film="Film Titel 1">
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                        <textarea placeholder="Jouw recensie..."></textarea>
+                        <button onclick="voegRecensieToe('Film Titel 1', this.previousElementSibling.previousElementSibling)">Plaats Recensie</button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <!-- Rechterpaneel: Overzicht van recensies -->
+        <div class="recensies">
+            <h2>Recente Recensies</h2>
+            <div id="recensieLijst"></div>
+            <div class="kortingsmelding" id="kortingsmelding" style="display: none;">
+                Bedankt voor het achterlaten van drie recensies! Hier is je unieke kortingscode: <strong>MTIME10</strong>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="js/script.js"></script>
+</body>
+</html>

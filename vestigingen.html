@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movietime</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Navigatiebalk -->
+    <nav>
+        <img src="images/movielogo.png" alt="Movietime Logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="films.html">Films</a></li>
+            <li><a href="recensies.html">Recensies</a></li>
+            <li><a href="vestigingen.html">Vestigingen</a></li>
+        </ul>
+    </nav>
+
+    <h1>Onze Vestigingen</h1>
+
+    <!-- Zoekveld -->
+    <div class="zoekveld">
+        <input type="text" id="zoekveld" placeholder="Zoek vestiging..." oninput="zoekVestiging()">
+    </div>
+
+    <!-- Contactblokken -->
+    <div class="contact-blokken" id="contactBlokken">
+        <div class="contact-blok">
+            <h2>MovieTime Amsterdam</h2>
+            <p>Kalverstraat 1, 1011 AA Amsterdam</p>
+            <p>T: 020 1234123</p>
+            <p>E: amsterdam@movietime.nl</p>
+        </div>
+        <div class="contact-blok">
+            <h2>MovieTime Amstelveen</h2>
+            <p>Stadsplein 2, 1122 BB Amstelveen</p>
+            <p>T: 020 4321321</p>
+            <p>E: amstelveen@movietime.nl</p>
+        </div>
+        <div class="contact-blok">
+            <h2>MovieTime Haarlem</h2>
+            <p>Zijlstraat 3, 2033 CC Haarlem</p>
+            <p>T: 023 7654321</p>
+            <p>E: haarlem@movietime.nl</p>
+        </div>
+        <div class="contact-blok">
+            <h2>MovieTime Utrecht</h2>
+            <p>Neude 4, 3544 DD Utrecht</p>
+            <p>T: 030 8877665</p>
+            <p>E: utrecht@movietime.nl</p>
+        </div>
+        <div class="contact-blok">
+            <h2>MovieTime Groningen</h2>
+            <p>Heerenstraat 5, 3544 DD Groningen</p>
+            <p>T: 050 8877665</p>
+            <p>E: groningen@movietime.nl</p>
+        </div>
+        <div class="contact-blok">
+            <h2>MovieTime Maastricht</h2>
+            <p>Vrijthof 6, 3544 DD Maastricht</p>
+            <p>T: 043 8877665</p>
+            <p>E: maastricht@movietime.nl</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
